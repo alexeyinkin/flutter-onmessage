@@ -1,3 +1,5 @@
+/// A copy of JavaScript's `MessageEvent` class that does not depend on
+/// JavaScript library and can be used on other platforms.
 class MessageEvent {
   final bool bubbles;
   final bool cancellable;
@@ -5,8 +7,11 @@ class MessageEvent {
   final String? origin;
   final String? lastEventId;
 
-  // Missing Window? source;
-  // Missing List<MessagePort> messagePorts;
+  /// JavaScript's EventTarget object.
+  final Object? source;
+
+  /// JavaScript's MessagePort objects.
+  final List<Object> ports;
 
   MessageEvent({
     required this.bubbles,
@@ -14,5 +19,7 @@ class MessageEvent {
     required this.data,
     required this.origin,
     required this.lastEventId,
+    required this.source,
+    required this.ports,
   });
 }

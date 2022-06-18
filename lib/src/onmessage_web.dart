@@ -16,19 +16,14 @@ class OnMessage extends OnMessageAbstract {
           data: event.data,
           origin: event.origin,
           lastEventId: event.lastEventId,
+          source: event.source,
+          ports: event.ports,
         ),
       );
     });
   }
 
-  static OnMessage? _instance;
-
-  static OnMessage get instance {
-    if (_instance == null) {
-      _instance = OnMessage();
-    }
-    return _instance!;
-  }
+  static final instance = OnMessage();
 
   @override
   void dispose() {
