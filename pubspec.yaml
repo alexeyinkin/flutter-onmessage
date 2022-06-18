@@ -1,0 +1,14 @@
+name: onmessage
+description: A simple way to listen to window.onmessage without testing the platform for web.
+repository: https://github.com/alexeyinkin/flutter-onmessage
+version: 0.1.0
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  meta: ^1.7.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
