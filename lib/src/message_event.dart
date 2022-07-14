@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 /// A copy of JavaScript's `MessageEvent` class that does not depend on
 /// JavaScript library and can be used on other platforms.
 class MessageEvent {
@@ -21,5 +23,16 @@ class MessageEvent {
     required this.lastEventId,
     required this.source,
     required this.ports,
+  });
+
+  @override
+  String toString () => jsonEncode({
+    'data': data,
+    'origin': origin,
+    'lastEventId': lastEventId,
+    'bubbles': bubbles,
+    'cancellable': cancellable,
+    'source': source,
+    'ports': ports,
   });
 }

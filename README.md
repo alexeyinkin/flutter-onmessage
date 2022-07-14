@@ -19,6 +19,10 @@ void main() {
 However, `dart:html` is not available on platforms other than web. If you use it,
 your app cannot be built there.
 
+The Dart team recommends conditional import of files that use `dart:html`
+which gets your app complex. And even then you must silence a linter warning of importing
+`dart:html` in a non-web-only package.
+
 This package provides a wrapper for that stream of messages that can be used on all platforms.
 On platforms other than web, the stream would just produce no events.
 
