@@ -26,13 +26,13 @@ class MessageEvent {
   });
 
   @override
-  String toString () => jsonEncode({
-    'data': data,
-    'origin': origin,
-    'lastEventId': lastEventId,
-    'bubbles': bubbles,
-    'cancellable': cancellable,
-    'source': source,
-    'ports': ports,
-  });
+  String toString() => jsonEncode({
+        'data': data,
+        'origin': origin,
+        'lastEventId': lastEventId,
+        'bubbles': bubbles,
+        'cancellable': cancellable,
+        'source': source,
+        'ports': ports,
+      });
 }

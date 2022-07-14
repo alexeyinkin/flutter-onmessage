@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Fix formatting.
+
 ## 0.1.2
 
 * Overridden `MessageEvent.toString()` to show all fields.
