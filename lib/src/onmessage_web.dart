@@ -4,10 +4,11 @@ import 'dart:html' as html;
 import 'message_event.dart';
 import 'onmessage_abstract.dart';
 
+/// A web implementation that does the job.
 class OnMessage extends OnMessageAbstract {
   StreamSubscription? _streamSubscription;
 
-  OnMessage() {
+  OnMessage._() {
     _streamSubscription = html.window.onMessage.listen((event) {
       addMessage(
         MessageEvent(
@@ -23,7 +24,8 @@ class OnMessage extends OnMessageAbstract {
     });
   }
 
-  static final instance = OnMessage();
+  /// The single instance.
+  static final instance = OnMessage._();
 
   @override
   void dispose() {

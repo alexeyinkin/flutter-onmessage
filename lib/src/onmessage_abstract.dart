@@ -4,6 +4,8 @@ import 'package:meta/meta.dart';
 
 import 'message_event.dart';
 
+/// The wrapper to the message stream.
+/// Has a web and a non-web implementations.
 abstract class OnMessageAbstract {
   final _streamController = StreamController<MessageEvent>.broadcast();
 
